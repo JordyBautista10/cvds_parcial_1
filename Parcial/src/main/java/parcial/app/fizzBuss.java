@@ -10,7 +10,7 @@ public class fizzBuss
      * a
      */
     public static void main(String[] args) {
-        String resultado = (multiploTres(9));
+        String resultado = (multiploCinco(9));
         System.out.println(resultado + " " + (resultado == "Fizz") );
     }
 
@@ -18,8 +18,8 @@ public class fizzBuss
         String resultadoTres = multiploTres(numero);
         String resultadoCinco = multiploCinco(numero);
         String resultado = (resultadoTres == "Fizz") ? resultadoTres: Integer.toString(numero);
-        resultado = (resultadoCinco == "Buzz") ? resultadoCinco : Integer.toString(numero);
-        resultado = (resultadoTres == "Fizz" && resultadoCinco == "Buzz" ) ? resultadoTres + resultadoCinco: Integer.toString(numero);
+        resultado = (resultadoCinco == "Buzz") ? resultadoCinco : resultado;
+        resultado = (resultadoTres == "Fizz" && resultadoCinco == "Buzz" ) ? resultadoTres + resultadoCinco: resultado;
         return resultado;
 
     }
